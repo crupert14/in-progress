@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+	--oslBlue: #00b5de;
+	--oslLightGrey: #b2b2b2;
+	--oslWhite: #ffffff;
+	--oslDarkGrey: #58595b;
+	--oslBlack: #231f20;
+	--oslPink: #e21d5c;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	height: auto;
+	width: auto;
+}
+
+header {
+	font-family: "Montserrat", sans-serif;
+	position: fixed;
+	top: 0;
+	height: 10%;
+	width: 100%;
+	background-color: var(--oslWhite);
+	border-bottom: 2px solid var(--oslLightGrey);
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(5, 200px);
+	grid-template-rows: repeat(3, 250px);
+	justify-content: space-between;
+	position: absolute;
+	top: 10%;
+	bottom: 5%;
+	width: 100%;
+	font-family: "Montserrat", sans-serif;
+	overflow-y: hidden;
+	min-width: 800px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	height: 5%;
+	width: 100%;
+	background-color: var(--oslBlack);
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
+}
+
+header > h1 {
+	min-width: 400px;
+}
+
+#logo-wrapper,
+#main-logo {
+	max-height: 100%;
+	max-width: 100%;
+	margin: auto;
+	display: block;
+}
+
+/* Device formatting */
+
+#new-device-wrapper {
+	grid-column: 3/3;
+	grid-row: 3/3;
+	background-color: var(--oslBlue);
+	color: var(--oslWhite);
+	text-align: center;
+	align-items: center;
+	border-radius: 25px;
+	user-select: none;
+	transition: 300ms;
+	margin: 0 auto;
+	height: 50%;
+	width: 70%;
+}
+
+#new-device-wrapper:hover {
+	background-color: var(--oslBlack);
+	cursor: pointer;
+}
+
+#new-device-wrapper:active {
+	background-color: var(--oslDarkGrey);
+}
+
+#new-device-wrapper > span {
+	position: relative;
+	top: 40%;
+	color: var(--oslWhite);
+}
+
+.device-wrapper {
+	background-color: green;
+}
+
+/* Footer Elements */
+
+footer > span > a,
+footer > span {
+	text-decoration: none;
+	color: var(--oslWhite);
+	transition: 500ms;
+}
+
+footer > span > a:hover,
+footer > span:hover {
+	text-decoration: underline;
+	color: var(--oslDarkGrey);
+}
+
+.carrier-input,
+.carrier-plan {
+	position: relative;
+	border: 1px solid var(--oslLightGrey);
+	left: 15%;
+	margin-top: 5%;
+}
